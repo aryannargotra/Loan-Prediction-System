@@ -39,13 +39,59 @@ File Named - ML model
   represents the outcome of the test, and each leaf node
   represents a class label (decision taken after computing all
   attributes). It is useful  in cases where data set is very scaterred
-  in both X and Y axis in graph and in which multiple attributes are responsible for prediction
+  in both X and Y axis in graph and in which multiple attributes are responsible for             prediction. After that I used GaussianNB because It is easy and fast to predict the class of   the test data set. It also performs well in multi-class prediction. And finally a Logistic     regression
   
 2. Are there missing values? If yes how you plan to handle it.
 
    Yes there were missing values I handled it by using  Pandas methods help us achieve this in    a single line of code for every column. The fillna()method fills the empty fields with        whatever parameter is given.Calculating the mean or mode of this array of values, and          passing it to fillna() completes this step.Using mode works best in our case, as most          columns are binary. Moreover, Mode will simply put the most occurring instance in place of    empty fields, which, under the circumstances, would be the best guess. 
+   
+   
+3.  How categorical features are handled for modeling.
     
-  
+    Using use the get_dummies function of Pandas for non-binary values like 'Property' to         automatically one-hot encode them
+    
+4. Describe the features correlation using correlation matrix. Tell us about few correlated      feature & share your understanding on why they are correlated.
+
+   A correlation matrix is a table showing the correlation coefficients between different sets    of variables  
+   
+   I've used seaborn heatmap for correlation in which the red/warm color denotes the stronger
+   corelation and in our dataframe Principal_loan_amount and months_loan_taken for a strong 
+   corelation because if the we increase loan amount the duration of loan also increases and 
+   Emi rate and loan amount have inverse corelation
+   
+  5. Do you plan to drop the correlated feature? If yes then how.
+
+     Yes I plan to showcase this feature using Seaborn heatmap because coolwarm colors really 
+     makes it easy to identify the correlation in dataframe.
+     
+ 6.  Which ML algorithm you plan to use for modeling. and Their different parameters
+
+     I used  a decision tree because its useful us in cases where data set is very scaterred
+     in both X and Y axis in graphs. It gave a accuracy of 64%
+     
+     
+     After That I used GaussianNB It perform well in case of categorical input variables            compared to numerical variable. I performed it to compare it with the Logistic Regression
+     and see the difference between the accuracy 
+     
+     Finally I used the Logistic Regression because it works well with bonary numeric values 
+     since after normalising most of the values in numeric binary Logistic regression gave us      the best accurancy of 72%.
+     
+  7.   Explain how you will export the trained models & deploy it for prediction in                  production.
+     
+       We can use TensorFlow model creation then create webservice to serve the client request
+       create deployment container with webservice, test the container, put it in production
+    
+     
+     
+     
+     
+
+     
+     
+     
+   
+   
+   
 
 
 
