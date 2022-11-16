@@ -9,7 +9,7 @@ Task 1
 1. Do the Exploratory Data Analysis & share the insights.
 
 Firstly read both csv files and did the exploratory analysis of both checked the relationship 
-between the Number of existing loans at this bank with High Risk applicant 
+between the Number of existing loans at this bank with High Risk applicant and bivariate analysis of Principal_loan_amount and Balance_in_existing_bank_account_(lower_limit_of_bucket)
 
 
 2. How would you segment customers based on their risk (of default)?
