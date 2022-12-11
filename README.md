@@ -1,6 +1,4 @@
 # Loan-Prediction-System
-Data Science Assignment - REUNION
-
 
 File named Data Insights
 
